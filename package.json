@@ -4,7 +4,8 @@
   "description": "Trainee",
   "main": "index.js",
   "scripts": {
-    "login": "/home/babita/Documents/cypress_automation/cypress/e2e/login.cy.js"
+    "login": "/home/babita/Documents/cypress_automation/cypress/e2e/login.cy.js",
+    "test": "npx cypress run "
   },
   "author": "Babita Shrees Magar",
   "license": "ISC",

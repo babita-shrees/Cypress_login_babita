@@ -9,7 +9,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     saveAllAttempts: false,
   },
-  projectId: "txzn9f",
+  projectId: "r382dx",
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);      
