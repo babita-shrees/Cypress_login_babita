@@ -61,13 +61,13 @@ describe("Login", () => {
 
   //test case 5
   it("User should not be able to log in when both or one of the fields is left empty", () => {
-    cy.blankLogin("login", email);
+    cy.blankLogin("login", invalidEmail);
     cy.get("#password").then(($input) => {
       expect($input[0].validationMessage).to.eq(validationErrorMessage);
     });
 
     cy.load();
-    cy.blankLogin("password", password);
+    cy.blankLogin("password", invalidPassword);
     cy.get("#login").then(($input) => {
       expect($input[0].validationMessage).to.eq(validationErrorMessage);
     });

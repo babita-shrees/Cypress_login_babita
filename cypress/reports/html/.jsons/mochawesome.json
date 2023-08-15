@@ -1,0 +1,228 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 6,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-15T09:39:26.866Z",
+    "end": "2023-08-15T09:39:45.944Z",
+    "duration": 19078,
+    "testsRegistered": 7,
+    "passPercent": 85.71428571428571,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d46930a1-4ce7-4608-8a37-d6c8fd0dfc61",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "input field should be highlighted when selected",
+              "fullTitle": "Login input field should be highlighted when selected",
+              "timedOut": null,
+              "duration": 2598,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#login\").click();\ncy.get(\"#login\").should(\"have.css\", \"border-color\", borderColor).and(\"have.css\", \"box-shadow\", fieldShadow);\ncy.get(\"#password\").click();\ncy.get(\"#password\").should(\"have.css\", \"border-color\", borderColor).and(\"have.css\", \"box-shadow\", fieldShadow);",
+              "err": {},
+              "uuid": "0544fceb-a283-4774-935c-d924126ad68f",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[ Email ] field should have 'email' as placeholder and [ Password ] field should have 'password' as placeholder.",
+              "fullTitle": "Login [ Email ] field should have 'email' as placeholder and [ Password ] field should have 'password' as placeholder.",
+              "timedOut": null,
+              "duration": 294,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#login\").should(\"have.attr\", \"placeholder\", \"Email\");\ncy.get(\"#password\").should(\"have.attr\", \"placeholder\", \"Password\");",
+              "err": {},
+              "uuid": "dd12f100-b7c9-474c-bc30-874b7ecd2c82",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user should be directed to reset password page when reset password is clicked",
+              "fullTitle": "Login user should be directed to reset password page when reset password is clicked",
+              "timedOut": null,
+              "duration": 829,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a[href=\"/web/reset_password\"]').click();\ncy.url().should(\"include\", reset);",
+              "err": {},
+              "uuid": "1e5c7d5a-1f1e-4a5b-974d-355d12df2fbb",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "The password should be masked",
+              "fullTitle": "Login The password should be masked",
+              "timedOut": null,
+              "duration": 411,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#password\").should(\"have.attr\", \"type\", \"password\");",
+              "err": {},
+              "uuid": "ffc9bf25-9ae2-49c2-b48b-174bdc27bf75",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should not be able to log in when both or one of the fields is left empty",
+              "fullTitle": "Login User should not be able to log in when both or one of the fields is left empty",
+              "timedOut": null,
+              "duration": 2254,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.blankLogin(\"login\", email);\ncy.get(\"#password\").then($input => {\n  expect($input[0].validationMessage).to.eq(validationErrorMessage);\n});\ncy.load();\ncy.blankLogin(\"password\", password);\ncy.get(\"#login\").then($input => {\n  expect($input[0].validationMessage).to.eq(validationErrorMessage);\n});\ncy.load();\ncy.get('button[type=\"submit\"]').click();\ncy.get(\"#login\").then($input => {\n  expect($input[0].validationMessage).to.eq(validationErrorMessage);\n});",
+              "err": {},
+              "uuid": "cb95bac5-476f-4cf2-b4a6-f0955af706e8",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User should not be able to login with invalid credentials",
+              "fullTitle": "Login User should not be able to login with invalid credentials",
+              "timedOut": null,
+              "duration": 2441,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(invalidEmail, invalidPassword);\ncy.contains(\"p.alert.alert-danger\", alertMessage, {\n  timeout: 3000\n}).should(\"be.visible\");",
+              "err": {},
+              "uuid": "c0c96b4a-4ee8-4369-b8cf-7bc2edb935ce",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user can attempt only 3 unsuccessful logins",
+              "fullTitle": "Login user can attempt only 3 unsuccessful logins",
+              "timedOut": null,
+              "duration": 10109,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Perform 3 unsuccessful login attempts\nfor (let i = 0; i < 3; i++) {\n  cy.login(invalidEmail, invalidPassword);\n  cy.contains(\"p.alert.alert-danger\", alertMessage, {\n    timeout: 3000\n  }).should(\"be.visible\");\n}\n// Attempt the 4th login with invalid credentials\ncy.login(invalidEmail, invalidPassword);\ncy.contains(accountLockMessage);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your account is locked. Please contact the administration.' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your account is locked. Please contact the administration.' but never did.\n    at Context.eval (webpack:///./cypress/e2e/login.cy.js:102:7)",
+                "diff": null
+              },
+              "uuid": "9c71eebe-bf3d-470c-af84-64f6aa23b8bb",
+              "parentUUID": "a7eb24d0-04ec-48b5-bb15-2daf39d407d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0544fceb-a283-4774-935c-d924126ad68f",
+            "dd12f100-b7c9-474c-bc30-874b7ecd2c82",
+            "1e5c7d5a-1f1e-4a5b-974d-355d12df2fbb",
+            "ffc9bf25-9ae2-49c2-b48b-174bdc27bf75",
+            "cb95bac5-476f-4cf2-b4a6-f0955af706e8",
+            "c0c96b4a-4ee8-4369-b8cf-7bc2edb935ce"
+          ],
+          "failures": [
+            "9c71eebe-bf3d-470c-af84-64f6aa23b8bb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18936,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "charts": true,
+        "reportPageTitle": "Login-Report",
+        "embeddedScreenshots": true,
+        "saveAllAttempts": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
