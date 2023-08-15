@@ -1,14 +1,14 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
-  reporterOptions: {
-    overwrite: true,
-    charts: true,
-    reportPageTitle: 'Login-Report',
-    embeddedScreenshots: true,
-    saveAllAttempts: false,
-  },
+  // reporter: 'cypress-mochawesome-reporter',
+  // reporterOptions: {
+  //   overwrite: true,
+  //   charts: true,
+  //   reportPageTitle: 'Login-Report',
+  //   embeddedScreenshots: true,
+  //   saveAllAttempts: false,
+  // },
   projectId: "r382dx",
   e2e: {
     setupNodeEvents(on, config) {
