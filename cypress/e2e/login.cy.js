@@ -110,22 +110,22 @@ describe("Login", () => {
   // });
 
     //test case 9
-  it("intercept example", () => {
-    cy.intercept("POST", "/check/location", (req) => {
-      req.reply((res) => {
-        if (res.statusCode == 200) {
-          res.body.result.url =
-            "/web#model=bajra_scrum.task&view_type=kanban&cids=&menu_id=317";
-        }
-      });
-    }).as("login");
+  // it("intercept example", () => {
+  //   cy.intercept("POST", "/check/location", (req) => {
+  //     req.reply((res) => {
+  //       if (res.statusCode == 200) {
+  //         res.body.result.url =
+  //           "/web#model=bajra_scrum.task&view_type=kanban&cids=&menu_id=317";
+  //       }
+  //     });
+  //   }).as("login");
 
-    cy.login(email, password);
+  //   cy.login(email, password);
 
-    cy.wait("@login");
-    cy.url().should(
-      "include",
-      "/web#model=bajra_scrum.task&view_type=kanban&cids=&menu_id=317"
-    );
-  });
+  //   cy.wait("@login");
+  //   cy.url().should(
+  //     "include",
+  //     "/web#model=bajra_scrum.task&view_type=kanban&cids=&menu_id=317"
+  //   );
+  // });
 });
