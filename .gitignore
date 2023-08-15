@@ -1,5 +1,3 @@
 cypress.env.json
-cypress/videos/
 node_modules/
 example.json
-cypress/screenshots/
