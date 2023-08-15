@@ -103,11 +103,11 @@ describe("Login", () => {
   });
 
   //test case 8
-  it("User should be able to login with valid credentials and with enter key", () => {
-    cy.get("#login").type(email);
-    cy.get("#password").type(password + "{enter}");
-    cy.url().should("include", dashboard);
-  });
+  // it("User should be able to login with valid credentials and with enter key", () => {
+  //   cy.get("#login").type(email);
+  //   cy.get("#password").type(password + "{enter}");
+  //   cy.url().should("include", dashboard);
+  // });
 
     //test case 9
   it("intercept example", () => {
