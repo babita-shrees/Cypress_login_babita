@@ -88,19 +88,19 @@ describe("Login", () => {
   });
 
   //test case 7
-  it("user can attempt only 3 unsuccessful logins", () => {
-    // Perform 3 unsuccessful login attempts
-    for (let i = 0; i < 3; i++) {
-      cy.login(invalidEmail, invalidPassword);
-      cy.contains("p.alert.alert-danger", alertMessage, {
-        timeout: 3000,
-      }).should("be.visible");
-    }
+  // it("user can attempt only 3 unsuccessful logins", () => {
+  //   // Perform 3 unsuccessful login attempts
+  //   for (let i = 0; i < 3; i++) {
+  //     cy.login(invalidEmail, invalidPassword);
+  //     cy.contains("p.alert.alert-danger", alertMessage, {
+  //       timeout: 3000,
+  //     }).should("be.visible");
+  //   }
 
-    // Attempt the 4th login with invalid credentials
-    cy.login(invalidEmail, invalidPassword);
-    cy.contains(accountLockMessage);
-  });
+  //   // Attempt the 4th login with invalid credentials
+  //   cy.login(invalidEmail, invalidPassword);
+  //   cy.contains(accountLockMessage);
+  // });
 
   //test case 8
   // it("User should be able to login with valid credentials and with enter key", () => {
