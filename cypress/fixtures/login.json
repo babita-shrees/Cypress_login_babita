@@ -1,0 +1,11 @@
+{
+  "reset": "/web/reset_password",
+  "dashboard": "/web#action=106&active_id=mailbox_inbox&cids=&menu_id=83",
+  "invalidEmail": "babitashrees@bajratechnologies.com",
+  "invalidPassword": "abcdefg",
+  "borderColor": "rgb(229, 128, 140)",
+  "fieldShadow": "rgba(190, 39, 58, 0.25) 0px 0px 0px 2.8px",
+  "validationMessage": "Please fill out this field.",
+  "alertMessage": "Wrong login/password",
+  "accountLockMessage": "Your account is locked. Please contact the administration."
+}
