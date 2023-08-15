@@ -12,8 +12,8 @@ module.exports = defineConfig({
   projectId: "r382dx",
   e2e: {
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);      
-      screenshotOnRunFailure= true;
+      // require('cypress-mochawesome-reporter/plugin')(on);      
+      // screenshotOnRunFailure= true;
     },
     baseUrl: "https://bajratechnologies.com",
   },  
